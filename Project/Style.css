@@ -558,6 +558,10 @@ h1 {
   text-shadow: none;
 }
 
+.learn-page .bat-highlight {
+  color: #ffffff;
+}
+
 .education-grid {
   margin-top: 28px;
   display: grid;

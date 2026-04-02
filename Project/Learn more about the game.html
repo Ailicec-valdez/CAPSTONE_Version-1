@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Learn More About the Game</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com" />
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+	<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet" />
+	<link rel="stylesheet" href="Style.css" />
+</head>
+<body>
+	<div class="noise"></div>
+
+	<main class="page education-page learn-page">
+		<header class="top-bar education-top-bar">
+			<span class="brand education-brand"> The Unknown</span>
+            </span>
+			<a class="ghost-link" href="index.html">Back to Home</a>
+		</header>
+
+		<section class="education-hero learn-hero">
+			<p class="eyebrow">About the game</p>
+			<h1>What this game is all about...</h1>
+			<p class="lead">
+				This Unknown is an ecological survival game following a <strong class="bat-highlight">Mexican Free-tailed Bat</strong> as you help it navigate the dangers it faces. Much of the bat population today deals with several environmental factors that threaten their species survival. This game was created to raise awareness about the importance of bats and other misunderstood animals, and to educate players about the challenges they face in their natural habitats.
+			</p>
+		</section>
+
+    
+        <section class="education-hero learn-hero">
+    <p class="lead"
+            <h2><strong class="bat-highlight" font-size="300">What can you do in the game?</strong> </h2>
+        </section>
+
+		<section class="education-grid learn-grid" aria-label="Game features">
+			<article class="education-card">
+				<h2>Learn</h2>
+				<p>
+					Enjoy education through interative story telling as we navigate several gaming strategies. Each level focuses on different issues our bat populations are facing, this includes decrease in population due to wind turbines, climate change, human effects, ect.
+				</p>
+			</article>
+
+			<article class="education-card">
+				<h2>Play</h2>
+				<p>
+					Enjoy several levels of gameplay as you put yourself in the shoes of a Mexican Free-tailed bat. Test your skills and see if you can survive the challenges of the world. Good Luck!
+				</p>
+			</article>
+
+			<article class="education-card">
+				<h2>Inspire</h2>
+				<p>
+					You are the future. We hope this game inspires you to take action and make a difference for bats and other misunderstood animals. Whether it's through supporting conservation efforts, spreading awareness, or simply learning more about these incredible creatures, every action counts.
+				</p>
+			</article>
+		</section>
+
+		<section class="education-quiz" aria-labelledby="quiz-heading">
+			<h2 id="quiz-heading">Quick Facts</h2>
+			<p>Choose the statement that is true:</p>
+			<div class="quiz-options" role="group" aria-label="Quiz options">
+				<button type="button" class="btn btn-secondary quiz-option" data-correct="false">All vultures hunt live prey</button>
+				<button type="button" class="btn btn-secondary quiz-option" data-correct="true">Earthworms improve soil health</button>
+				<button type="button" class="btn btn-secondary quiz-option" data-correct="false">Bats are blind</button>
+			</div>
+			<p class="quiz-status" id="quiz-status" aria-live="polite"></p>
+		</section>
+	</main>
+
+	<script>
+		const quizStatus = document.getElementById("quiz-status");
+		document.querySelectorAll(".quiz-option").forEach((button) => {
+			button.addEventListener("click", () => {
+				const isCorrect = button.dataset.correct === "true";
+				quizStatus.textContent = isCorrect ? "Correct. Earthworms help keep soil healthy." : "Not quite. Try another choice.";
+			});
+		});
+	</script>
+</body>
+</html>
