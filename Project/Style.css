@@ -569,6 +569,10 @@ h1 {
   gap: 12px;
 }
 
+.learn-page .learn-grid {
+  grid-template-columns: 1fr;
+}
+
 .education-card {
   background: linear-gradient(165deg, rgba(13, 62, 82, 0.82), rgba(10, 48, 62, 0.78));
   border: 1px solid rgba(114, 255, 220, 0.28);
